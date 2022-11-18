@@ -32,6 +32,8 @@ func (w *Websocket) Shutdown() {
 }
 
 func (w *Websocket) wss_handler(c *websocket.Conn) {
+	fmt.Println("websocket connected")
+	fmt.Println("server is keeping connection open using for loop")
 	for {
 		messageType, message, err := c.ReadMessage()
 		_ = messageType
