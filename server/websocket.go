@@ -42,7 +42,6 @@ func (w *Websocket) wss_handler(c *websocket.Conn) {
 			if websocket.IsUnexpectedCloseError(err, websocket.CloseGoingAway, websocket.CloseAbnormalClosure) {
 				fmt.Println("read error:", err)
 			}
-			c.Close()
 			break
 		}
 
